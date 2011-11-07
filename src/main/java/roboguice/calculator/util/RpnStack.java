@@ -3,12 +3,12 @@ package roboguice.calculator.util;
 import roboguice.activity.event.OnPauseEvent;
 import roboguice.activity.event.OnResumeEvent;
 import roboguice.event.Observes;
+import roboguice.inject.ContextSingleton;
 import roboguice.util.Ln;
 
 import android.content.SharedPreferences;
 
 import com.google.inject.Inject;
-import com.google.inject.Singleton;
 
 import java.math.BigDecimal;
 import java.util.Stack;
@@ -24,7 +24,7 @@ import java.util.Stack;
  *
  * Is a singleton.
  */
-@Singleton
+@ContextSingleton
 public class RpnStack extends Stack<BigDecimal> {
     @Inject SharedPreferences prefs;
 
